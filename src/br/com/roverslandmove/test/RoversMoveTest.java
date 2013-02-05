@@ -28,7 +28,16 @@ public class RoversMoveTest {
 		String instructions = "LMLMLMLMM";
 		roversList.get(0).setPosition(firstPosition);
 		roversList.get(0).move(instructions);
-		assertEquals("1 3 N",roversList.get(0).getPosition(instructions));
+		assertEquals("1 3 N",roversList.get(0).getPosition());
 	}
+	@Test
+	public void move2(){
+		String firstPosition = "3 3 E";
+		String instructions = "MMRMMRMRRM";
+		roversList.get(1).setPosition(firstPosition);
+		roversList.get(1).move(instructions);
+		assertEquals("5 1 E",roversList.get(1).getPosition());
+	}
+	
 
 }

@@ -8,7 +8,7 @@ public interface Robot {
 	
 	public void setPosition(String firstPosition);
 
-	public String getPosition(String instructions);
+	public String getPosition();
 
 	public void move(String instructions);
 }
