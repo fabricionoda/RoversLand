@@ -17,7 +17,7 @@ public class RoversMoveTest {
 		rovers1.setPosition("AX5461668");
 		roversList.add(rovers1);
 		
-		Rovers rovers2 = new Rovers();
+		Robot rovers2 = new Rovers();
 		rovers2.setPosition("AY5461669");
 		roversList.add(rovers2);
 	}
