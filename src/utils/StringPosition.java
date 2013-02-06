@@ -9,11 +9,11 @@ public final class StringPosition extends Object implements Serializable {
 	}
 
 	public static char getY(String position) {
-		return position.trim().charAt(1);
+		return position.trim().charAt(2);
 	}
 
 	public static char getCoordinate(String position) {
-		return position.trim().charAt(3);
+		return position.trim().charAt(4);
 	}
 
 }

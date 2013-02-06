@@ -15,9 +15,9 @@ public class ChangePositionRotateLeft implements ChangePosition {
 		
 		Cordinate rotation = new Rotation(); 		
 		
-		pos[3] = rotation.getNextCordinate(cordinate, TurnEnum.L);
+		pos[4] = rotation.getNextCordinate(cordinate, TurnEnum.L);
 		
-		return pos.toString();
+		return new String(pos);
 	}
 
 }
