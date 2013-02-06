@@ -4,7 +4,7 @@ import utils.StringPosition;
 import br.com.roverslandmove.enums.Move;
 
 public class MoveOnLand implements Move{
-
+	//TODO: Rewrite
 	@Override
 	public String ahead(String position) {
 		char x = StringPosition.getX(position);
@@ -25,7 +25,9 @@ public class MoveOnLand implements Move{
 	}
 
 	private char moveMinus(char in) {
-		return (char) (Character.getNumericValue(in) - 1);
+		int current = (char) in;
+		int result = current - 1;
+		return (char) (result);
 	}
 
 	private char movePlus(char in) {

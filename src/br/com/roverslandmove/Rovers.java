@@ -32,19 +32,20 @@ public class Rovers implements Robot {
 	}
 
 	@Override
-	public void move(String instructions) {
+	public void move(String instructions) {	
 		char[] inst = instructions.trim().toCharArray();
 		for (char c : inst) {
+			
 			changeObjectPosition(c);
 		}
 	}
-
-	private void changeObjectPosition(char c) {
+	
+	public void changeObjectPosition(char c) {
 		Map<String, ChangePosition> changePositionTypeMap = new HashMap<String, ChangePosition>();
 		changePositionTypeMap.put("L", new ChangePositionRotateLeft());
 		changePositionTypeMap.put("R",new ChangePositionRotateRight());
 		changePositionTypeMap.put("M",new ChangePositionMove());
-		ChangePosition changePosition = (ChangePosition) changePositionTypeMap.get(c);
+		ChangePosition changePosition = (ChangePosition) changePositionTypeMap.get(Character.toString(c));
 		this.position = changePosition.change(position);
 	}
 }

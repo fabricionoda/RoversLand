@@ -1,6 +1,5 @@
 package br.com.roverslandmove;
 
-import br.com.roverslandmove.enums.CordinateEnum;
 import br.com.roverslandmove.enums.TurnEnum;
 import br.com.roverslandmove.interfaces.Cordinate;
 
