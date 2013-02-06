@@ -35,6 +35,6 @@ public class ChangePositionTest {
 	}
 	@Test
 	public void move(){
-		assertEquals("5 5 N",changePositionMove.change("5 6 N"));
+		assertEquals("5 6 N",changePositionMove.change("5 5 N"));
 	}
 }
