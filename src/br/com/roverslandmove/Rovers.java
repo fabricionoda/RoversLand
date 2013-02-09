@@ -51,5 +51,6 @@ public class Rovers implements Robot {
 		changePositionTypeMap.put("M",new ChangePositionMove());
 		ChangePosition changePosition = changePositionTypeMap.get(Character.toString(c));
 		this.position = changePosition.change(position);
+		changePosition = null;
 	}
 }
