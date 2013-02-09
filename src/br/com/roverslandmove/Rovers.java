@@ -10,7 +10,12 @@ public class Rovers implements Robot {
 	
 	private String id;	
 	private String position = "0 0 N";
+	private Map<String, ChangePosition> changePositionTypeMap;
 
+	public Rovers(){
+		changePositionTypeMap = new HashMap<String, ChangePosition>();
+	}
+	
 	@Override
 	public void setId(String id) {
 		this.id = id;
@@ -40,12 +45,11 @@ public class Rovers implements Robot {
 		}
 	}
 	
-	public void changeObjectPosition(char c) {
-		Map<String, ChangePosition> changePositionTypeMap = new HashMap<String, ChangePosition>();
+	public void changeObjectPosition(char c) {		
 		changePositionTypeMap.put("L", new ChangePositionRotateLeft());
 		changePositionTypeMap.put("R",new ChangePositionRotateRight());
 		changePositionTypeMap.put("M",new ChangePositionMove());
-		ChangePosition changePosition = (ChangePosition) changePositionTypeMap.get(Character.toString(c));
+		ChangePosition changePosition = changePositionTypeMap.get(Character.toString(c));
 		this.position = changePosition.change(position);
 	}
 }
